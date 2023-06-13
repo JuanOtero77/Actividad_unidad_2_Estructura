@@ -33,15 +33,25 @@ public class ListaPerzonalizada {
     public boolean encontrar(int numero) {
         return numeros.contains(numero);
     }
+    
+    //operacion para mostrar los elementos de una lista
+    public void mostrar(){
+        for(Integer numero : numeros){
+            System.out.println(numero);
+        }
+    }
 
     public static void main(String[] args) {
         ListaPerzonalizada lista = new ListaPerzonalizada();
-        lista.agregar(1);
-        lista.agregar(2);
-        lista.agregar(3);
-        
-        System.out.println(lista.encontrar(2));
-        lista.eliminar(2);
-        System.out.println(lista.encontrar(2));
+        lista.agregar(14);
+        lista.agregar(24);
+        lista.agregar(32);
+        System.out.println("se encontro el numero de la posicion 2:");
+        System.out.println(lista.encontrar(24));
+        lista.eliminar(24);
+        System.out.println("se encontro el numero de la posicion 2:");
+        System.out.println(lista.encontrar(24));
+        System.out.println("Lista personalizada:");
+        lista.mostrar();
     }
 }
